@@ -3,25 +3,27 @@
 #include<math.h>
 
 int main() {
-    int key;
+    int key=0;
     printf("ENTER A NUMBER : ");
     scanf("%d", &key);
-    int dig, i=0, key2,j = key;
+    int dig=0, count=0,ans =0;
+    int keyCopy = key;
 
-    while(key2>0) {
-        key2 /= 10;
-        i++;
+    while(keyCopy>0) {
+        keyCopy /= 10;
+        count++;
     }
-    key2 = i +1;
-    i=0;
+    keyCopy = key;
+    printf("%d \n", count);
     while(key>0) {
         dig = key%10;
-        i += pow(dig , key2);
+        ans += pow(dig , count);
+        printf("%d \n", ans);
         key /= 10;
     }
 
-    if(i==key) {
-        printf("THE GIVEN NUMBER IS AN AMSTRONG NUMBER");
+    if(ans==keyCopy) {
+        printf("THE GIVEN NUMBER IS AN AMSTRONG NUMBER ");
     } else {
         printf("THE GIVEN NUMBER IS NOT AN AMSTRONG NUMBER");
     }
