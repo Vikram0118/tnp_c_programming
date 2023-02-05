@@ -8,7 +8,7 @@ int main() {
 
     for(int i=0; i<length; i++){
         if(i%2 == 0){
-            printf("ascend \n");
+            // printf("ascend \n");
             for(int j=i; j<length; j++){
                 for(int k=j; k<length; k++ ){
                     if(a[k]>a[j]){
@@ -20,7 +20,7 @@ int main() {
             }
         }
         if(i%2 != 0){
-            printf("descend \n");
+            // printf("descend \n");
             for(int j=i; j<length; j++){ 
                 for(int k=j; k<length; k++ ){
                     if(a[k]<a[j]){
