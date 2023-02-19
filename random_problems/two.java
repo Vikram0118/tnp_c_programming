@@ -1,3 +1,4 @@
+package random_problems;
 public class two {
     public static void main (String[] args) {
         // given array
